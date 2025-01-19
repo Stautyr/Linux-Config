@@ -12,5 +12,8 @@ source ~/.bashrc
 cp -r nvim/ ~/.config/
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/DejaVuSansMono.zip
+unzip DejaVuSansMono.zip
+sudo mv *.ttf /usr/share/fonts/
 
 nvim ~/.config/nvim/lua/theprimeagen/packer.lua
