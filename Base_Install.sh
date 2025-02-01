@@ -8,8 +8,10 @@ sudo apt-get upgrade -y
 curl -v 2>/dev/null
 if [ -n $? ];then
   echo "Curl NOT INSTALLED"
-  exit 1
+  sudo apt install curl
 fi
+
+
 
 # Nvim Install
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
