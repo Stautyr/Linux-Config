@@ -17,7 +17,6 @@ fi
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 echo 'alias nvim="/opt/nvim-linux-x86_64/bin/nvim"' >> $HOME/.bash_aliases
-source $HOME/.bashrc
 cp -r nvim/ $HOME/.config/
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -25,4 +24,4 @@ curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/DejaVu
 unzip DejaVuSansMono.zip
 sudo mv *.ttf /usr/share/fonts/
 
-nvim $HOME/.config/nvim/lua/theprimeagen/packer.lua
+/opt/nvim-linux-x86_64/bin/nvim $HOME/.config/nvim/lua/theprimeagen/packer.lua
