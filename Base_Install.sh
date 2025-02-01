@@ -16,7 +16,7 @@ fi
 # Nvim Install
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
-echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin/"' >> ~/.bashrc
+echo 'alias nvim="/opt/nvim-linux-x86_64/bin/nvim"' >> ~/.bash_aliases
 source ~/.bashrc
 cp -r nvim/ ~/.config/
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
