@@ -16,13 +16,13 @@ fi
 # Nvim Install
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
-echo 'alias nvim="/opt/nvim-linux-x86_64/bin/nvim"' >> ~/.bash_aliases
-source ~/.bashrc
-cp -r nvim/ ~/.config/
+echo 'alias nvim="/opt/nvim-linux-x86_64/bin/nvim"' >> $HOME/.bash_aliases
+source $HOME/.bashrc
+cp -r nvim/ $HOME/.config/
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+ $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
 curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/DejaVuSansMono.zip
 unzip DejaVuSansMono.zip
 sudo mv *.ttf /usr/share/fonts/
 
-nvim ~/.config/nvim/lua/theprimeagen/packer.lua
+nvim $HOME/.config/nvim/lua/theprimeagen/packer.lua
