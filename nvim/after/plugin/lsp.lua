@@ -5,7 +5,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {'tsserver', 'rust_analyzer', "lua_ls", "pyright","bashls"}, --"mypy", "ruff", "black"}, look into https://roobert.github.io/2022/12/03/Extending-Neovim/
+    ensure_installed = {'ts_ls', "lua_ls", "pyright", "bashls"}, 
     handlers = {
         lsp.default_setup,
         lua_ls = function()
